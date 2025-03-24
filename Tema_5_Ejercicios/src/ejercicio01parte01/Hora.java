@@ -78,7 +78,7 @@ public class Hora {
 
 	}
 
-	public String toString(int horas, int minutos) {
+	public String toString() {
 
 		String resultado = horas + ":" + minutos;
 
