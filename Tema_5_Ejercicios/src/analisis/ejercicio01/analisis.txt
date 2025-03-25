@@ -1,0 +1,27 @@
+Class Vehiculo
+ - String marca
+  - String modelo
+  - String color
+  - String matricula
+  - boolean motorEncendido
+  - int marchaActual
+  - int velocidadActual
+  + parar()
+  + arrancar()
+  + subirMarcha()
+  + bajarMarcha()
+  
+ class Turismo extends Vehiculo {
+  - int numeroPlazas
+  - String tipoUso
+}
+
+class Camion extends Vehiculo {
+  - float pesoMaximoAutorizado
+  - boolean transportaMercanciaPeligrosa
+}
+
+class Motocicleta extends Vehiculo {
+  - int cilindrada
+  + requiereCarnet(): boolean
+}
