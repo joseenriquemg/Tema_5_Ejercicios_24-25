@@ -46,40 +46,43 @@ public class Vehiculo {
 
 	public void parar() {
 
-		motorEncendido = false;
+		if (motorEncendido == true) {
+
+			motorEncendido = false;
+
+		}
 
 	}
 
 	public void arrancar() {
 
-		motorEncendido = true;
+		if (!motorEncendido) {
+
+			motorEncendido = true;
+
+		}
 
 	}
 
 	public void subirMarcha() {
 
-		if (marchaActual >= 1 && marchaActual < 5) {
+		if ((marchaActual >= 1 && marchaActual < 5) && !motorEncendido) {
 
 			marchaActual++;
 
-		} else {
-			
-			
-			
 		}
-
 	}
 
 	public void bajarMarcha() {
 
-		if (marchaActual > 1) {
+		if (marchaActual > 1 && !motorEncendido) {
 
 			marchaActual--;
 
 		} else {
 
-			
-			
+			motorEncendido = false;
+
 		}
 
 	}
