@@ -86,5 +86,15 @@ public class Vehiculo {
 		}
 
 	}
+	
+	public int seleccionarMarcha() {
+		
+		int marcha = 0;
+		
+		
+		
+		return marcha;
+		
+	}
 
 }

@@ -4,9 +4,11 @@ public class Turismo extends Vehiculo {
 
 	private int numeroPlazas;
 
-	private enum tipoUso {
+	private enum TipoUso {
 		PROFESIONAL, PARTICULAR
 	};
+	
+	private TipoUso uso;
 
 	public Turismo(String marca, String modelo, String color, String matricula, int numeroPlazas) {
 		super(marca, modelo, color, matricula);
