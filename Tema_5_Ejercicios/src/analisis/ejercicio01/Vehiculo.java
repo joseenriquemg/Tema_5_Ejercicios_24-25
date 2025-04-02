@@ -12,9 +12,9 @@ public class Vehiculo {
 
 	private boolean motorEncendido = false;
 
-	private int marchaActual;
+	private int marchaActual = 0;
 
-	private int velocidadActual;
+	private int velocidadActual = 0;
 
 	public Vehiculo(String marca, String modelo, String color, String matricula) {
 
@@ -84,17 +84,38 @@ public class Vehiculo {
 			motorEncendido = false;
 
 		}
-
 	}
-	
+
 	public int seleccionarMarcha() {
-		
+
 		int marcha = 0;
-		
-		
+
+		while (this.velocidadActual < velocidadActual) {
+
+			this.velocidadActual++;
+
+			System.out.println(this.velocidadActual);
+
+			if (this.velocidadActual >= 0 && this.velocidadActual < 30 && marchaActual < 1) {
+				subirMarcha();
+				System.out.println("Cambio de marcha: " + this.marchaActual);
+			} else if (this.velocidadActual >= 30 && this.velocidadActual < 50 && marchaActual < 2) {
+				subirMarcha();
+				System.out.println("Cambio de marcha: " + this.marchaActual);
+			} else if (this.velocidadActual >= 50 && this.velocidadActual < 70 && marchaActual < 3) {
+				subirMarcha();
+				System.out.println("Cambio de marcha: " + this.marchaActual);
+			} else if (this.velocidadActual >= 70 && this.velocidadActual < 100 && marchaActual < 4) {
+				subirMarcha();
+				System.out.println("Cambio de marcha: " + this.marchaActual);
+			} else if (this.velocidadActual >= 100 && marchaActual < 5) {
+				subirMarcha();
+				System.out.println("Cambio de marcha: " + this.marchaActual);
+			}
+		}
 		
 		return marcha;
-		
+
 	}
 
 }

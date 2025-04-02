@@ -7,10 +7,40 @@ public class Turismo extends Vehiculo {
 	private enum TipoUso {
 		PROFESIONAL, PARTICULAR
 	};
-	
+
 	private TipoUso uso;
 
-	public Turismo(String marca, String modelo, String color, String matricula, int numeroPlazas) {
+	public String getUso() {
+
+		String uso;
+
+		switch (this.uso) {
+
+		case PARTICULAR -> {
+
+			uso = "Particular";
+
+		}
+
+		case PROFESIONAL -> {
+
+			uso = "Profesional";
+
+		}
+
+		default -> {
+
+			uso = "Null";
+
+		}
+
+		}
+
+		return uso;
+
+	}
+
+	public Turismo(String marca, String modelo, String color, String matricula, int numeroPlazas, String uso) {
 		super(marca, modelo, color, matricula);
 
 		if (numeroPlazas >= 2) {
@@ -33,6 +63,12 @@ public class Turismo extends Vehiculo {
 			this.numeroPlazas = numeroPlazas;
 
 		}
+	}
+	
+	public void compruebaUso() {
+		
+		
+		
 	}
 
 }
